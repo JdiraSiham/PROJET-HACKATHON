@@ -52,7 +52,7 @@ yarn-error.log*
 
 # Next.js
 .next/
-out/
+# out/ ← REMOVED ! On garde le build frontend
 
 # Environment variables
 .env
