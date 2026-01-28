@@ -2,7 +2,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile.fixed
+      dockerfile: Dockerfile
     container_name: skin_ai_frontend
     ports:
       - "3000:3000"
@@ -18,7 +18,7 @@ services:
   backend:
     build:
       context: ./backend  
-      dockerfile: Dockerfile.fixed
+      dockerfile: Dockerfile
     container_name: skin_ai_backend
     ports:
       - "8000:8000"
@@ -39,7 +39,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx.fixed.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./media:/app/media:ro
     depends_on:
       - frontend
