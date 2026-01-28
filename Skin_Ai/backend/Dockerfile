@@ -1,4 +1,3 @@
-# Backend Dockerfile - Django Application
 FROM python:3.12-slim
 
 WORKDIR /app

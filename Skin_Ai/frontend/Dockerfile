@@ -1,4 +1,3 @@
-# Frontend Dockerfile - Next.js Application
 FROM node:18-alpine
 
 WORKDIR /app
@@ -12,11 +11,11 @@ RUN npm install --legacy-peer-deps
 # Copy source code
 COPY . .
 
-# Build the application
-RUN npm run build
+# Create .next directory if it doesn't exist
+RUN mkdir -p .next
 
 # Expose port
 EXPOSE 3000
 
-# Start the application
-CMD ["npm", "start"]
+# Start development server
+CMD ["npm", "run", "dev"]

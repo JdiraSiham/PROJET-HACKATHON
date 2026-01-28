@@ -26,15 +26,12 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual environments (only exclude global ones, keep backend/venv for local dev)
+# Virtual environments
 venv/
 env/
 ENV/
 .venv/
 .env/
-
-# But keep backend/venv for local development
-# backend/venv/
 
 # Django
 *.log
@@ -52,7 +49,7 @@ yarn-error.log*
 
 # Next.js
 .next/
-# out/ ← REMOVED ! On garde le build frontend
+out/
 
 # Environment variables
 .env
