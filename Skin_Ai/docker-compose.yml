@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   backend:
     build: .
@@ -33,4 +31,3 @@ services:
     restart: unless-stopped
 
 volumes:
-  media_data:
