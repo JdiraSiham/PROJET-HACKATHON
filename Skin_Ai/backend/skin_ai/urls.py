@@ -17,8 +17,20 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
+
+def api_root(request):
+    return JsonResponse({
+        'message': 'Skin AI API',
+        'version': '1.0.0',
+        'endpoints': {
+            'diagnosis': '/api/diagnosis/',
+            'admin': '/admin/'
+        }
+    })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', api_root, name='api-root'),
     path('api/diagnosis/', include('diagnosis.urls')), 
 ]
