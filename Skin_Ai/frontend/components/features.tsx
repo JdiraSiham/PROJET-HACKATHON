@@ -9,33 +9,33 @@ export function Features() {
   const features = [
     {
       icon: Scan,
-      title: t.features.feature1.title,
-      description: t.features.feature1.description,
+      title: t.features?.feature1?.title || "Multimodal Video Analysis",
+      description: t.features?.feature1?.description || "Our AI analyzes skin changes frame by frame, detecting subtle variations in color, texture, and swelling patterns.",
     },
     {
       icon: TrendingUp,
-      title: t.features.feature2.title,
-      description: t.features.feature2.description,
+      title: t.features?.feature2?.title || "Temporal Reasoning",
+      description: t.features?.feature2?.description || "Track progression or improvement of inflammation over time with intelligent pattern recognition.",
     },
     {
       icon: Leaf,
-      title: t.features.feature3.title,
-      description: t.features.feature3.description,
+      title: t.features?.feature3?.title || "Natural Care Suggestions",
+      description: t.features?.feature3?.description || "Receive gentle, bio-friendly care suggestions alongside common over-the-counter product recommendations.",
     },
     {
       icon: Apple,
-      title: t.features.feature4.title,
-      description: t.features.feature4.description,
+      title: t.features?.feature4?.title || "Nutrition Guidance",
+      description: t.features?.feature4?.description || "Get personalized dietary recommendations that support skin health and reduce inflammation naturally.",
     },
     {
       icon: Clock,
-      title: t.features.feature5.title,
-      description: t.features.feature5.description,
+      title: t.features?.feature5?.title || "Adaptive Routines",
+      description: t.features?.feature5?.description || "Your care routine adjusts automatically based on observed skin response in follow-up videos.",
     },
     {
       icon: Shield,
-      title: t.features.feature6.title,
-      description: t.features.feature6.description,
+      title: t.features?.feature6?.title || "Privacy First",
+      description: t.features?.feature6?.description || "Your videos and data are encrypted and never shared. You control your information at all times.",
     },
   ]
 
@@ -54,15 +54,15 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-sm shadow-[0_0_15px_-5px_rgba(212,175,55,0.3)]">
                 <span className="text-primary font-bold text-xs uppercase tracking-[0.25em]">
-                    {t.features.badge}
+                    {t.features?.badge || "Features"}
                 </span>
             </div>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-xl tracking-tight">
-            {t.features.title}
+            {t.features?.title || "AI That Understands Your Skin"}
           </h2>
           <p className="text-gray-300/80 text-lg leading-relaxed max-w-2xl mx-auto">
-            {t.features.subtitle}
+            {t.features?.subtitle || "Powered by advanced multimodal AI, Smart Skin Insight provides comprehensive analysis and personalized guidance."}
           </p>
         </div>
 

@@ -10,26 +10,26 @@ export function HowItWorks() {
     {
       icon: Video,
       step: "01",
-      title: t.howItWorks.step1.title,
-      description: t.howItWorks.step1.description,
+      title: t.howItWorks?.step1?.title || "Record a Video",
+      description: t.howItWorks?.step1?.description || "Capture a 5-10 second video of the affected skin area.",
     },
     {
       icon: Brain,
       step: "02",
-      title: t.howItWorks.step2.title,
-      description: t.howItWorks.step2.description,
+      title: t.howItWorks?.step2?.title || "AI Analysis",
+      description: t.howItWorks?.step2?.description || "Advanced AI analyzes skin changes frame by frame.",
     },
     {
       icon: FileText,
       step: "03",
-      title: t.howItWorks.step3.title,
-      description: t.howItWorks.step3.description,
+      title: t.howItWorks?.step3?.title || "Get Insights",
+      description: t.howItWorks?.step3?.description || "Receive detailed insights about possible inflammation types.",
     },
     {
       icon: CalendarDays,
       step: "04",
-      title: t.howItWorks.step4.title,
-      description: t.howItWorks.step4.description,
+      title: t.howItWorks?.step4?.title || "Follow Your Plan",
+      description: t.howItWorks?.step4?.description || "Get a personalized step-by-step routine.",
     },
   ]
 
@@ -42,13 +42,13 @@ export function HowItWorks() {
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-bold text-sm uppercase tracking-widest border border-primary/20 px-3 py-1 rounded-full bg-primary/10">
-            {t.howItWorks.badge}
+            {t.howItWorks?.badge || "How It Works"}
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-6 text-foreground bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-            {t.howItWorks.title}
+            {t.howItWorks?.title || "Four Simple Steps to Healthier Skin"}
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            {t.howItWorks.subtitle}
+            {t.howItWorks?.subtitle || "Our AI-powered platform makes understanding your skin simple and accessible to everyone."}
           </p>
         </div>
 

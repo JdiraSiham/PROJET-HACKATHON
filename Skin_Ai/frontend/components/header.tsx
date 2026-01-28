@@ -10,7 +10,7 @@ import { LuxuryLogo } from "@/components/ui/LuxuryLog"
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { language, setLanguage, t } = useLanguage()
+  const { currentLanguage, changeLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,11 +61,11 @@ export function Header() {
         {/* Actions (Langue + Bouton) */}
         <div className="hidden md:flex items-center gap-4">
           <button
-            onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
+            onClick={() => changeLanguage(currentLanguage.code === 'en' ? 'fr' : 'en')}
             className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-primary transition-colors px-3 py-2 rounded-full hover:bg-white/5"
           >
             <Globe className="w-4 h-4" />
-            <span className="uppercase">{language}</span>
+            <span className="uppercase">{currentLanguage.code}</span>
           </button>
           
           <Link href="/analyze">
@@ -98,15 +98,15 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-             <button
-                onClick={() => {
-                    setLanguage(language === 'en' ? 'fr' : 'en');
-                    setIsMobileMenuOpen(false);
-                }}
-                className="flex items-center justify-center gap-2 text-lg font-medium text-gray-300 hover:text-primary"
+            <button
+              onClick={() => {
+                changeLanguage(currentLanguage.code === 'en' ? 'fr' : 'en');
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex items-center justify-center gap-2 text-lg font-medium text-gray-300 hover:text-primary"
             >
-                <Globe className="w-5 h-5" />
-                <span className="uppercase">{language === 'en' ? 'Français' : 'English'}</span>
+              <Globe className="w-5 h-5" />
+              <span className="uppercase">{currentLanguage.code === 'en' ? 'Français' : 'English'}</span>
             </button>
             <Link href="/analyze" onClick={() => setIsMobileMenuOpen(false)}>
               <Button className="w-full bg-primary text-black hover:bg-white font-bold py-6 rounded-xl">
