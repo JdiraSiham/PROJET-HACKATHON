@@ -131,7 +131,7 @@ from dotenv import load_dotenv
 CORS_ALLOW_ALL_ORIGINS = True
 
 # 🚨 FORCE LA CLÉ ICI (Colle ta nouvelle clé entre les guillemets)
-GEMINI_API_KEY = "AIzaSyAeH6S0r6q3NUvojrYPyt_O7muzfxRT0NY"
+GEMINI_API_KEY = "VOTRE_API_KEY_ICI"
 
 # DEBUG : On affiche la clé dans le terminal au démarrage pour être SÛR
 print(f"[KEY] CLE FORCEE : {GEMINI_API_KEY[:10]}... (Verifie que c'est la nouvelle !)")
