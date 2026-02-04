@@ -1,6 +1,6 @@
 # 🎨 Skin AI - Dermatology AI Assistant
 
-Une application web moderne d'IA pour l'analyse dermatologique avec Next.js frontend et Django backend.
+A modern AI-powered web application for dermatological analysis with a Next.js frontend and a Django backend.
 
 ## 🚀 Quick Start
 
