@@ -1,6 +1,6 @@
 # 🎨 Skin AI - Dermatology AI Assistant
 
-Une application web moderne d'IA pour l'analyse dermatologique avec Next.js frontend et Django backend.
+A modern AI-powered web application for dermatological analysis with a Next.js frontend and a Django backend.
 
 ## 🚀 Quick Start
 
@@ -10,23 +10,23 @@ git clone https://github.com/JdiraSiham/PROJET-HACKATHON.git
 cd PROJET-HACKATHON/Skin_Ai
 ```
 
-### 2. ⚠️ **IMPORTANT - Configurez votre API Key Gemini**
+### 2. ⚠️ **IMPORTANT – Configure Your Gemini API Key**
 
-**OBLIGATOIRE :** Vous devez configurer votre propre API key Google Gemini pour que l'application fonctionne.
+**REQUIRED :** You must configure your own Google Gemini API key for the application to work.
 
-#### Étape A - Obtenir une API Key :
-1. Allez sur https://aistudio.google.com/app/apikey
-2. Connectez-vous avec votre compte Google
-3. Cliquez sur "Create API Key"
-4. Copiez la clé générée (elle ressemble à : `AIzaSy...`)
+#### Step A – Get an API Key:
+1. Go to: https://aistudio.google.com/app/apikey
+2. Sign in with your Google account
+3. Click on “Create API Key”
+4. Copy the generated key (it looks like: `AIzaSy...`)
 
-#### Étape B - Configurer l'API Key dans le projet :
-1. Ouvrez le fichier : `backend/skin_ai/settings.py`
-2. Trouvez la ligne (vers la ligne 134) :
+#### Step B – Configure the API Key in the project:
+1. Open the file: `backend/skin_ai/settings.py`
+2. Find the line (around line 134):
    ```python
    GEMINI_API_KEY ="AIzaSyDru1I4lqLey-vl1oDCwisymSn6CACSMHI"
    ```
-3. **Remplacez la clé existante par votre nouvelle clé** :
+3. **Replace the existing key with your new key** :
    ```python
    GEMINI_API_KEY ="VOTRE_NOUVELLE_CLE_API_ICI"
    ```
@@ -130,26 +130,26 @@ Skin_Ai/
 
 ## 🔧 Environment Variables
 
-### ⚠️ **IMPORTANT - Configuration API Key**
+### ⚠️ **IMPORTANT – API Key Configuration**
 
-Pour que l'application fonctionne, vous **DEVEZ** configurer votre API key Google Gemini :
+For the application to work, you MUST configure your Google Gemini API key:
 
-**1. Obtenez votre API Key :**
-- Visitez : https://aistudio.google.com/app/apikey
-- Créez une nouvelle API key
-- Copiez la clé (format : `AIzaSy...`)
+**1. Get your API Key:**
+- Visit: https://aistudio.google.com/app/apikey
+- Create a new API key
+- Copy the key (format : `AIzaSy...`)
 
-**2. Configurez l'API Key :**
-- Ouvrez : `backend/skin_ai/settings.py`
-- Trouvez la ligne : `GEMINI_API_KEY ="AIzaSyDru1I4lqLey-vl1oDCwisymSn6CACSMHI"`
-- **Remplacez par votre clé** : `GEMINI_API_KEY ="VOTRE_CLÉ_ICI"`
+**2. Configure the API Key:**
+- Open : `backend/skin_ai/settings.py`
+- Find the line : `GEMINI_API_KEY ="AIzaSyDru1I4lqLey-vl1oDCwisymSn6CACSMHI"`
+- **Replace it with your key:** : `GEMINI_API_KEY ="VOTRE_CLÉ_ICI"`
 
-**3. Redémarrez les services :**
+**3. Restart the services :**
 ```bash
 docker-compose restart backend
 ```
 
-### Variables d'environnement optionnelles :
+### Optional environment variables:
 
 Create `.env` file from `.env.example`:
 
@@ -177,7 +177,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
 
 1. Fork the repository
 2. Create feature branch
-3. **Configurez votre API Key** (voir section "Configuration API Key")
+3. **Configure your API Key** (see the "Configuration API Key" section)
 4. Commit changes
 5. Push to branch
 6. Create Pull Request
@@ -197,28 +197,28 @@ This project is licensed under the MIT License.
 
 **✅ Last Updated: January 28, 2026 - Docker Configuration Complete**
 
-## 🔧 **Dépannage - Problèmes Communs**
+## 🔧 **Troubleshooting – Common Issues**
 
-### ❌ **Erreur 403 "API key was reported as leaked"**
-**Solution :** Votre API key a été blacklistée.
-1. Créez une nouvelle API key sur https://aistudio.google.com/app/apikey
-2. Mettez à jour `backend/skin_ai/settings.py`
-3. Redémarrez : `docker-compose restart backend`
+### ❌ **403 Error “API key was reported as leaked"**
+**Solution :** Your API key has been blacklisted.
+1. Create a new API key at https://aistudio.google.com/app/apikey
+2. Update `backend/skin_ai/settings.py`
+3. Restart: `docker-compose restart backend`
 
-### ❌ **L'application ne se lance pas**
-**Vérifiez :**
-- Docker Desktop est bien démarré
-- Ports 80, 3000, 8000 ne sont pas utilisés
-- API key est correctement configurée
+### ❌ **The application does not start**
+**Check that:**
+- Docker Desktop is running
+- Ports 80, 3000, and 8000 are not in use
+- The API key is correctly configured
 
-### ❌ **L'analyse de peau ne fonctionne pas**
-**Vérifiez :**
-- API key est valide et active
-- Connexion internet fonctionne
-- Logs du backend : `docker-compose logs backend`
+### ❌ **Skin analysis is not working**
+**Check that:**
+- The API key is valid and active
+- Your internet connection is working
+- Backend logs: `docker-compose logs backend`
 
 ### 🎯 **Support**
-Pour toute question, vérifiez les logs :
+For any questions, check the logs:
 ```bash
 docker-compose logs -f
 ```
